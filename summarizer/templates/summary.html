@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<nav class="navbar bg-primary">
+    <div class="container-fluid">
+      <a class="navbar-brand text-white " href="#">Video Summarizer</a>
+      <form class="d-flex" role="search">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn  text-white bg-dark" type="submit">Search</button>
+      </form>
+    </div>
+  </nav>
+
+<div class="container rounded py-3 mt-5 bg-info">
+    
+    <h1 class="mt-4 "> "{{ video.title }}"</h1>
+    <div class="card mt-4  ">
+        <div class="card-body">
+            <h5 class="card-title">Video Title: {{ video.title }}</h5>
+            <h6 class="card-subtitle mb-2 text-muted">Video URL: <a href="{{ video.youtube_url }}">{{ video.youtube_url }}</a></h6>
+            <p class="card-text fw-bold">Transcript: {{ video.summary }}</p>
+        </div>
+    </div>
+</div>
+<footer class="footer">
+    <div class="container">
+        <p class="text-center">&copy; 2023 YouTube Video Summarizer. All rights reserved.</p>
+        <p class="text-center">Developed by AJAY</p>
+        <p class="text-center fw-bold">Contact: rajputajy@gmail.com </p>
+    </div>
+</footer>
+
+{% endblock %}

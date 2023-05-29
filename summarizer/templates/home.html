@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<nav class="navbar bg-primary">
+    <div class="container-fluid">
+      <a class="navbar-brand text-white">Video Summarizer</a>
+      <form class="d-flex" role="search">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn  text-white bg-dark" type="submit">Search</button>
+      </form>
+    </div>
+  </nav>
+ 
+
+    <div class="container bg-secondary mt-5 py-3">
+        <h1 class="mt-4 text-white">YouTube Video Summarizer</h1>
+        <form method="post" action="{% url 'home' %}">
+            {% csrf_token %}
+            <div class="form-group">
+                <label for="youtube_url " class="text-white">YouTube URL:</label>
+                <input type="text" class="form-control" id="youtube_url" name="youtube_url" placeholder="Enter YouTube URL" required>
+            </div>
+            <button type="submit" class="btn btn-primary my-2">Summarize</button>
+        </form>
+    </div>
+
+    <footer class="footer">
+        <div class="container mt-5">
+            <p class="text-center">&copy; 2023 YouTube Video Summarizer. All rights reserved.</p>
+        </div>
+    </footer>
+{% endblock %}

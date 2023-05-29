@@ -1,0 +1,7 @@
+Django==4.2.1
+pytube==15.0.0
+requests==2.31.0
+sqlparse==0.4.4
+urllib3==2.0.2
+urlparse2==1.1.1
+youtube-transcript-api==0.6.0
